@@ -27,3 +27,4 @@ RUN $CONDA_DIR/bin/jupyter nbextension disable --sys-prefix create_assignment/ma
 RUN $CONDA_DIR/bin/jupyter serverextension disable --sys-prefix nbgrader.server_extensions.formgrader
 
 ADD nbgrader_config.py $CONDA_DIR/etc/jupyter/
+ADD jupyter_notebook_config.py $CONDA_DIR/etc/jupyter/
