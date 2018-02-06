@@ -26,7 +26,7 @@ path[][] draw_grid(int[] ngrid, real[] canvas_size, pen box_pen,
       grid_paths[ni][nj] = p;
       for (int np = 0; np <= fill_paths.length - 1 ; ++np) {
         real[] positions = intersect(p, fill_paths[np]);
-        if (positions.length > 0) {
+        if (positions.length > 0 || inside(p, fill_paths[np]) > 0) {
           fill(p, fill_pen);
         }
       }
